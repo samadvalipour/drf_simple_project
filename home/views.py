@@ -1,7 +1,6 @@
-from django.http import HttpResponse
-from django.views import View
+from rest_framework.views import APIView
+from rest_framework.response import Response
 
-class HomeView(View):
+class HomeView(APIView):
     def get(self,request):
-        return HttpResponse("<h1>this is home</h1>")
-
+        return Response({"msg":"Hello World"})
